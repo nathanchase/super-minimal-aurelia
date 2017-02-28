@@ -1,3 +1,3 @@
-export class PageHelloViewModel {
-  name = '';
+
+export class PageHelloViewModel {  
 }
