@@ -22,6 +22,14 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.(js)$/,
+        loaders: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          plugins: ['transform-decorators-legacy' ]
+        }
+      },
       { test: /\.css$/i, use: ["style-loader", "css-loader"] },
       { test: /\.html$/i, use: "html-loader" }
     ]
