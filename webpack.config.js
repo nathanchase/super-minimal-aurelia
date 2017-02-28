@@ -1,5 +1,5 @@
 const path = require("path");
-const webpack = require('webpack');
+const BabiliPlugin = require("babili-webpack-plugin");
 const { AureliaPlugin } = require("aurelia-webpack-plugin");
 // TODO: this is only temporary until a patched aurelia release is published.
 const coreDeps = require("aurelia-core-dependencies");
@@ -28,7 +28,11 @@ module.exports = {
   },  
 
   plugins: [
-    new AureliaPlugin(),
-    coreDeps
+    new AureliaPlugin({
+      dist: 'es2015',
+      features: { svg: false, unparser: false, polyfills: "esnext" },
+    }),
+    coreDeps,
+    new BabiliPlugin()
   ],
 };
