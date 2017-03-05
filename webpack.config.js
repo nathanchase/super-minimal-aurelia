@@ -1,11 +1,9 @@
 const path = require("path");
-const BabiliPlugin = require("babili-webpack-plugin");
 const { AureliaPlugin } = require("aurelia-webpack-plugin");
-// TODO: this is only temporary until a patched aurelia release is published.
-const coreDeps = require("aurelia-core-dependencies");
+const BabiliPlugin = require("babili-webpack-plugin");
 
 module.exports = {
-  entry: { "main": "aurelia-bootstrapper" },
+  entry: "aurelia-bootstrapper",
 
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -15,9 +13,8 @@ module.exports = {
   },
 
   resolve: {
-    extensions: [".js"],
+    extensions: [".ts", ".js"],
     modules: ["src", "node_modules"].map(x => path.resolve(x)),
-    symlinks: false,
   },
 
   module: {
@@ -31,16 +28,12 @@ module.exports = {
         }
       },
       { test: /\.css$/i, use: ["style-loader", "css-loader"] },
-      { test: /\.html$/i, use: "html-loader" }
+      { test: /\.html$/i, use: "html-loader" },
     ]
   },  
 
   plugins: [
-    new AureliaPlugin({
-      dist: 'es2015',
-      features: { svg: false, unparser: false, polyfills: "esnext" },
-    }),
-    coreDeps,
+    new AureliaPlugin(),
     new BabiliPlugin()
   ],
 };

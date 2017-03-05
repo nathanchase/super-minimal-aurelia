@@ -1,4 +1,4 @@
-import {inject} from 'aurelia-framework';
+import { inject, PLATFORM } from 'aurelia-framework';
 import { Router } from 'aurelia-router';
 
 @inject(Router)
