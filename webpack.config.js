@@ -7,13 +7,13 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    publicPath: "dist",
+    publicPath: "/",
     filename: "[name].js",    
     chunkFilename: "[name].js"
   },
 
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: [".js"],
     modules: ["src", "node_modules"].map(x => path.resolve(x)),
   },
 
@@ -27,8 +27,14 @@ module.exports = {
           plugins: ['transform-decorators-legacy' ]
         }
       },
-      { test: /\.css$/i, use: ["style-loader", "css-loader"] },
-      { test: /\.html$/i, use: "html-loader" },
+      { test: /\.css$/i, 
+        use: [
+          "style-loader", 
+          "css-loader"
+        ] 
+      },
+      { test: /\.html$/i, 
+        use: "html-loader" }
     ]
   },  
 
