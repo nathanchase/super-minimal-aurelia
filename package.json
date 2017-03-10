@@ -3,17 +3,17 @@
   "devDependencies": {
     "aurelia-webpack-plugin": "^2.0.0-rc.1",
     "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
+    "babel-loader": "^6.4.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babili-webpack-plugin": "^0.0.11",
-    "css-loader": "^0.26.2",
+    "css-loader": "^0.26.4",
     "html-loader": "^0.4.5",
     "style-loader": "^0.13.2",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
   },
   "dependencies": {
-    "aurelia-bootstrapper": "^2.1.0"
+    "aurelia-bootstrapper": "^2.1.1"
   },
   "scripts": {
     "web": "webpack-dev-server --hot --inline"
