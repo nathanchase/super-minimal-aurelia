@@ -1,6 +1,7 @@
 const path = require("path");
 const { AureliaPlugin } = require("aurelia-webpack-plugin");
 const BabiliPlugin = require("babili-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: "aurelia-bootstrapper",
@@ -39,7 +40,13 @@ module.exports = {
   },  
 
   plugins: [
-    new AureliaPlugin(),
-    new BabiliPlugin()
+    new AureliaPlugin({
+      dist: 'es2015'
+    }),
+    new BabiliPlugin(),
+    new HtmlWebpackPlugin({
+        template: '!html-webpack-plugin/lib/loader!index.html',
+        filename: 'index.html'
+    }), 
   ],
 };
