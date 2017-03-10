@@ -1,7 +1,7 @@
 # super-minimal-aurelia
 A barebones Aurelia + webpack2 build
 
-This boilerplate is up to date as of March 5th, 2017, and incorporates the following:
+This boilerplate is up to date as of March 9th, 2017, and incorporates the following:
 
 * An ES6-based Aurelia implementation (rather than Typescript)
 * Use of Babili (https://github.com/babel/babili) for minifying all .js files (Aurelia and views/viewmodels)
