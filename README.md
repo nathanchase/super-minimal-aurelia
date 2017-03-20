@@ -10,23 +10,33 @@ This boilerplate is up to date as of March 19th, 2017, and incorporates the foll
 
 Here's all you need to get started. 
 
-Step 1) Make sure you have Yarn installed.
+**Step 1)** 
+
+Make sure you have Yarn installed.
 
 `npm install -g yarn`
 
-Step 2) Install the dependencies
+**Step 2)** 
+
+Install the dependencies
 
 `yarn`
 
-Step 3) Test it out in your browser (at http://localhost:8080)
+**Step 3)** 
+
+Test it out in your browser (at http://localhost:8080)
 
 `yarn web`
 
-Step 4) (optional) Build an optimized version ready to upload to a web server
+**Step 4)** _(optional)_
+
+Build an optimized version ready to upload to a web server
 
 `yarn prod`
 
-Step 5) Enjoy how easy that was!
+**Step 5) **
+
+Enjoy how easy that was!
 
 Hope this helps someone else out there!
 
@@ -37,6 +47,7 @@ Hope this helps someone else out there!
 Special thanks to:
 
 jods4
+
 nashwaan
 
 - based originally on https://github.com/jods4/aurelia-webpack-build
