@@ -34,7 +34,7 @@ Build an optimized version ready to upload to a web server
 
 `yarn prod`
 
-**Step 5) **
+**Step 5)**
 
 Enjoy how easy that was!
 
