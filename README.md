@@ -26,13 +26,13 @@ Install the dependencies
 
 Test it out in your browser (at http://localhost:8080)
 
-`yarn web`
+`yarn run web`
 
 **Step 4)** _(optional)_
 
 Build an optimized version ready to upload to a web server
 
-`yarn prod`
+`yarn run prod`
 
 **Step 5)**
 
