@@ -10,19 +10,19 @@ This boilerplate is up to date as of April 6th, 2017, and incorporates the follo
 
 Here's all you need to get started. 
 
-**Step 1)** Install [Yarn](https://yarnpkg.com/en/) (you _can_ just use npm, but why would you want to?)
+**Step 1)** Install [npm](http://blog.npmjs.org/post/85484771375/how-to-install-npm), and then install [Yarn](https://yarnpkg.com) on your command line:
 
 `npm install -g yarn`
 
-**Step 2)** Install the dependencies
+**Step 2)** Install the dependencies:
 
 `yarn`
 
-**Step 3)** Test it out in your browser (at http://localhost:8080)
+**Step 3)** Test it out in your browser (at http://localhost:8080):
 
 `yarn run web`
 
-**Step 4)** _(optional)_ Build an optimized version ready to upload to a web server
+**Step 4)** _(optional)_ Build an optimized version ready to upload to a web server:
 
 `yarn run prod`
 
