@@ -11,9 +11,6 @@ const Map = require('core-js/es6/map');
 const WeakMap = require('core-js/es6/weak-map');
 const Promise = require('core-js/es6/promise');
 
-// ES6 compatible minfication/compresion
-//const BabiliPlugin = require('babili-webpack-plugin');
-
 module.exports = {
   entry: {
     main: [ 
@@ -60,6 +57,7 @@ module.exports = {
   },  
 
   plugins: [
+
     // required polyfills for non-evergreen browsers
     new webpack.ProvidePlugin({        
         Map: 'core-js/es6/map',
