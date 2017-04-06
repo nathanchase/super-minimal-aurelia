@@ -10,7 +10,7 @@ This boilerplate is up to date as of April 6th, 2017, and incorporates the follo
 
 Here's all you need to get started. 
 
-**Step 1)** Install [Yarn](https://yarnpkg.com/en/) - so much better than regular old npm! ;)
+**Step 1)** Install [Yarn](https://yarnpkg.com/en/) (you _can_ just use npm, but why would you want to?)
 
 `npm install -g yarn`
 
