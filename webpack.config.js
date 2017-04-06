@@ -7,9 +7,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { AureliaPlugin } = require('aurelia-webpack-plugin');
 
 // Polyfills for non-evergreen browsers
-const Bluebird = require('bluebird');
 const Map = require('core-js/es6/map');
 const WeakMap = require('core-js/es6/weak-map');
+const Promise = require('core-js/es6/promise');
 
 // ES6 compatible minfication/compresion
 //const BabiliPlugin = require('babili-webpack-plugin');
