@@ -51,7 +51,8 @@ module.exports = {
     new webpack.ProvidePlugin({        
         Map: 'core-js/es6/map',
         WeakMap: 'core-js/es6/weak-map',
-        Promise: 'core-js/es6/promise'
+        Promise: 'core-js/es6/promise',
+        regeneratorRuntime: 'regenerator-runtime' // to support await/async syntax
     }),
 
     // init aurelia-webpack-plugin
