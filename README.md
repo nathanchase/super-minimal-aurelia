@@ -1,5 +1,5 @@
 # super-minimal-aurelia
-A barebones Aurelia + webpack2 build
+A barebones Aurelia + webpack2 build with decorators and async/await support
 
 This boilerplate is up to date as of April 13th, 2017, and incorporates the following:
 
