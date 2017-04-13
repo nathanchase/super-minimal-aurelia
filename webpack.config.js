@@ -1,27 +1,17 @@
-// Webpack variables and plugins
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-// Aurelia plugin for Webpack
-const { AureliaPlugin } = require('aurelia-webpack-plugin');
-
-// Polyfills for non-evergreen browsers
-const Bluebird = require('bluebird');
-const Map = require('core-js/es6/map');
-const WeakMap = require('core-js/es6/weak-map');
-
-// ES6 compatible minfication/compresion
-//const BabiliPlugin = require('babili-webpack-plugin');
+const AureliaWebpackPlugin = require('aurelia-webpack-plugin');
+//const BabiliPlugin = require('babili-webpack-plugin'); // ES6 compatible minfication/compresion
 
 module.exports = {
   entry: {
     main: [ 
       './ie-polyfill',
-      'babel-polyfill',
       'aurelia-bootstrapper'
     ]
   },
+
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
@@ -31,21 +21,17 @@ module.exports = {
 
   resolve: {
     extensions: ['.js'],
-    modules: ['src', 'node_modules'].map(x => path.resolve(x)),
+    modules: ['src', 'node_modules'],
   },
 
   module: {
     rules: [
-      {
-        test: /\.(js)$/,
+      { test: /\.(js)$/,
         loaders: 'babel-loader',
         exclude: /node_modules/,
-        query: {
-
-          // use 'babel-preset-env' without transforming ES6 modules, and with added support for decorators
-          presets: [['env', { modules: false }], 'stage-0'],
-          plugins: ['transform-decorators-legacy']
-
+        query: { // use 'babel-preset-env' without transforming ES6 modules, and with added support for decorators
+          presets: [['env', { modules: false }]],
+          plugins: ['transform-class-properties', 'transform-decorators-legacy']
         }
       },
       { test: /\.css$/i, 
@@ -68,7 +54,7 @@ module.exports = {
     }),
 
     // init aurelia-webpack-plugin
-    new AureliaPlugin(),
+    new AureliaWebpackPlugin.AureliaPlugin(),
     
     // have Webpack copy over the index.html and inject appropriate script tag for Webpack-bundled entry point 'main.js'
     new HtmlWebpackPlugin({
