@@ -31,7 +31,7 @@ module.exports = {
         exclude: /node_modules/,
         query: { // use 'babel-preset-env' without transforming ES6 modules, and with added support for decorators
           presets: [['env', { modules: false }]],
-          plugins: ['transform-class-properties', 'transform-decorators-legacy']
+          plugins: [ 'transform-decorators-legacy', 'transform-class-properties']
         }
       },
       { test: /\.css$/i, 
